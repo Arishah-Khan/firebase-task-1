@@ -31,6 +31,10 @@ signupBtn.addEventListener("click", () => {
     createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
       .then((userCredential) => {
         Swal.fire("Success!", "Account created successfully", "success");
+
+        setTimeout(() => {
+          location.href = "login.html";
+        }, 2000);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -63,5 +67,5 @@ signupBtn.addEventListener("click", () => {
   userEmail.value = "";
   userPassword.value = "";
 
-  location.href = "login.html";
+
 });
