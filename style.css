@@ -1,0 +1,173 @@
+/* CSS File - style.css */
+
+/* Body Styles */
+body {
+    background-color: #4d9ecb; /* Change body background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Change font family */
+    position: relative; /* Enable absolute positioning for child elements */
+}
+
+/* Half Circle Design */
+.half-circle {
+    position: absolute;
+    top: 0;
+    right: 0; /* Position it to the right */
+    width: 50vw; /* Adjust width as needed */
+    height: 50vh; /* Half the height of the viewport */
+    background: #4d9ecb; /* Half circle color */
+    border-radius: 0 0 100% 100%; /* Create a half circle */
+    z-index: 1; /* Place it behind other elements */
+}
+
+/* Material Container Styles */
+.materialContainer {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Add some padding to prevent edge clipping */
+    box-sizing: border-box; /* Include padding in width calculations */
+    z-index: 2; /* Place above the half circle */
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    color: #4d9ecb; /* Change title color to #4d9ecb */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input {
+    margin-top: 20px;
+    position: relative;
+}
+
+.input label {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f8f8f8;
+    box-sizing: border-box; /* Consistent sizing */
+}
+
+.input input:focus {
+    border-color: #4d9ecb; /* Change focus border color */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(77, 158, 203, 0.1);
+}
+
+.input .spin {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #4d9ecb; /* Change to the desired color */
+    transition: width 0.4s;
+}
+
+.input input:focus + .spin {
+    width: 100%;
+}
+
+.button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #4d9ecb; /* Update gradient colors */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Consistent sizing */
+}
+
+.button button:hover {
+    background: #4d9ecb;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .materialContainer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .box {
+        padding: 40px 20px; /* Reduced padding for smaller screens */
+    }
+
+    .title {
+        font-size: 20px; /* Slightly smaller font for the title */
+    }
+
+    .input input {
+        padding: 10px; /* Reduced padding for input fields */
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    .button button {
+        padding: 10px; /* Reduced padding for button */
+        font-size: 14px; /* Smaller font size for button */
+    }
+}
+
+@media (max-width: 400px) {
+    .materialContainer {
+        padding: 5px; /* Further reduce padding for very small screens */
+        width: 320px;
+    }
+
+    .box {
+        padding: 30px 10px; /* Further reduced padding for very small screens */
+    }
+
+    .title {
+        font-size: 18px; /* Even smaller title font */
+    }
+
+    .input input {
+        font-size: 12px; /* Smaller font size for inputs */
+    }
+
+    .button button {
+        font-size: 12px; /* Smaller font size for button */
+    }
+}

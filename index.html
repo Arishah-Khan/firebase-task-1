@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="half-circle"></div> <!-- Half circle added here -->
+    <div class="materialContainer">
+        <div class="box register-box">
+            <div class="title">Sign Up</div>
+
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <span class="spin"></span>
+            </div>
+    
+            <div class="input">
+                <label for="regpass">Password</label>
+                <input type="password" name="regpass" id="regpass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="button">
+                <button type="button" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="firebase.js">
+        </script>
+    <script type = "module" src ="signup.js">
+        </script>
+
+    </script>
+</body>
+</html>
